@@ -5,4 +5,4 @@ Escribir un programa que pida al usuario dos números enteros y muestre por pant
 # en un output se muestra el resultado y se calcula dentro de estas usando operadores como // y % que es para obtener el entero sin residuo y el modulo
 n = int(input("Ingresa un numero numerador: "))
 m = int(input("Ingresa un denominador: "))
-print(f'El resultado de: {n} / {m} nos da que el cociente es igual a: {n//m} y un resto de {n%m}')
+print(f'El resultado de: {n} / {m} nos da que el cociente es igual a: {n // m} y un resto de {n % m}')
