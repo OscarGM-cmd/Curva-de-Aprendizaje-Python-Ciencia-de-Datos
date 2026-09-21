@@ -47,4 +47,4 @@ Busca en donde se encuentra dicho elemento en una lista
 X = lista.index(51)
 
 
-print(X)
+print(lista)
