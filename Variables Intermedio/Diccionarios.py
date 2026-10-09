@@ -8,7 +8,7 @@ diccionario = {frozenset(["dato 1", "dato 2"]): "jua" , ("Dato 1","Dato 2"): "je
 diccionario = dict.fromkeys(["nombre","apellido"])
 
 # Creacion de diccionarios con fromkeys con valor a "Desconocido"
-diccionario = dict.fromkeys(["nombre","apellido"], "No se")
+diccionario = dict.fromkeys(["nombre","apellido"], "Desconocido")
 
 print(diccionario)
 
