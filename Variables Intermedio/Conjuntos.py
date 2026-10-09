@@ -17,4 +17,6 @@ print(resultado)
 # Verificacion si es un superconjunto
 resultado = conjunto1.issuperset(conjunto2)
 resultado = conjunto2 > conjunto1
+
+
 print(resultado)
