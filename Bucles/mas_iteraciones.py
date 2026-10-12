@@ -1,5 +1,7 @@
+# Creando las listas
 frutas= ["banana","manzana","ciruela","pera","naranja","granada","durazno"]
 cadena_texto = "Hola oscar"
+numeros = [2,5,8,10]
 
 # Evitando que se coma una manzana con la sentencia contunua
 for fruta in frutas:
@@ -25,3 +27,12 @@ else:
 # Recorrer una cadena de texto
 for letra in cadena_texto:
     print(letra)
+
+# Duplicar numeros pero con un ciclo regular
+numeros_duplicados = list()
+for numero in numeros:
+    numeros_duplicados.append(numero*2)
+
+# For en una sola linea de codigo
+numeros_duplicados = [x*2 for x in numeros]
+print(numeros_duplicados)
