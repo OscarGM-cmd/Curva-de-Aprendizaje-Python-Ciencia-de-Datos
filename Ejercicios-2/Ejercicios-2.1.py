@@ -26,21 +26,30 @@ asistente,profesor = obtener_compañeros(5)
 print(f'El profesor es: {profesor} y su asistente es: {asistente}')
 """
 
-def IngresarDatosyOrdenar(texto):
-    edades_lista = [item.strip() for item in texto.split(",")]
-    nombres = edades_lista[0::2]
-    edades = [int(x) for x in edades_lista[1::2]]
-    parejas = list(zip(nombres, edades))
-    parejas.sort(key=lambda x: x[1])
-    Asistente = parejas[0]  
-    Docente = parejas[-1]   
-    alumnos_ordenados = parejas[1:-1]
-    return alumnos_ordenados, Docente, Asistente
+def IngresarDatosyOrdenar(datos):
+    DatosLista = [item.strip() for item in datos.split(",")]
+    Alumnos = DatosLista[0::2]
+    Edades = [int(x) for x in DatosLista[1::2]]
+    Juntos = list(zip(Alumnos,Edades))
+    Juntos.sort(key=lambda x: x[1])
+    Asistente = Juntos[0]
+    Docente = Juntos[-1] 
+    Alumnos = Juntos[1:-1]
+    return Alumnos,Asistente,Docente
 
-entrada = input("Ingresa el nombre y edad (Juan,12,Luis,13,Pedro,45,Ana,10): ")
-alumnos, docente, asistente = IngresarDatosyOrdenar(entrada)
-alumnos_texto = ", ".join([f"{nom} ({edad} años)" for nom, edad in alumnos])
+entrada = input("Ingresa los alumnos (Juan,10,Diego,5,Pedro,21,Young,50): ")
+Alumnos,Asistente,Docente = IngresarDatosyOrdenar(entrada)
+Alumnos_texto = ", ".join([f"{nom} ({edad} años)" for nom, edad in Alumnos])
+print(f"""
+(A)
+-----------------------------------------------------------------------------------------------------------------------------------
+   Los alumnos ordenados de mayor a menor son:
+   {Alumnos_texto}
+-----------------------------------------------------------------------------------------------------------------------------------
 
-print(f"\n(A) Los alumnos ordenados de menor a mayor son: {alumnos_texto}")
-print(f"(B) El profesor es {docente[0]} con una edad de: {docente[1]} años")
-print(f"    El asistente es {asistente[0]} con una edad de: {asistente[1]} años")
+(B)
+-----------------------------------------------------------------------------------------------------------------------------------
+   El profesor es {Docente[0]} y su edad es {Docente[1]}
+   El asistente es {Asistente[0]} y su edad es: {Asistente[1]}
+-----------------------------------------------------------------------------------------------------------------------------------
+   """)
