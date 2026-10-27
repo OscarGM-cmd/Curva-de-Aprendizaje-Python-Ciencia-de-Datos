@@ -32,7 +32,7 @@ elemento_especifico_fila = x.loc[2,"edad"]
 # Accediendo a un elemento especifico del csv con iloc, accediendo al elemento 2
 elemento_especifico_indice = x.iloc[2,2]
 
-# Accediendo a todas las filas de una columna
+# Accediendo a todos los apellidos con iloc
 elementos_de_fila = x.iloc[:,1]
 
 # Accediendo a la fila 3 con iloc
