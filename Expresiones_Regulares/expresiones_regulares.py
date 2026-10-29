@@ -40,6 +40,20 @@ y Esta es la linea 3 de texto'''
 
 #^ -> Bsca el comienzo de una linea (Buscando hola al principio de la linea)
 # flags=re.M activa la multilinea
-resultado = re.findall(f'^Esta',texto,flags=re.M)
+#resultado = re.findall(f'^Esta',texto,flags=re.M)
+
+#$ -> Bsca el final de una linea
+# flags=re.M activa la multilinea
+#resultado = re.findall(f',$',texto,flags=re.M)
+
+#{n} -> Busca n cantidad de veces el valor de la izquierda, (Busca 3 numeros juntos)
+#resultado = re.findall(r'\d{3}\s',texto)
+
+#{n,m} -> Busca al menos n, como maximo m
+#resultado = re.findall(r'\d{2,4}',texto)
+
+# | -> Busca una cosa o la otra
+resultado = re.findall(r'\d{2,4}|Hola',texto)
 
 print(resultado)
+
