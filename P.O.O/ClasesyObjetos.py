@@ -34,9 +34,16 @@ class Celular:
         self.marca = marca
         self.modelo = modelo
         self.camara = camara
+    def llamar(self):
+        print(f"Estas haciendo un llamado desde un: {self.modelo}")
+
+    def cortar(self):
+        print(f"Cortaste la llamada desde tu: {self.modelo}")
 
 
 celular1 = Celular("Samsumg","S23","48MP")
 celular2 = Celular("Apple","Iphone 15 pro","48MP")
 
 print(celular1.marca)
+celular1.llamar()
+celular2.cortar()
