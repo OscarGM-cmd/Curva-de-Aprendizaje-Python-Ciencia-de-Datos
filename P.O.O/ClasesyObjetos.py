@@ -28,6 +28,7 @@
 # print(celular1.camara)
 
 
+# Primera clase con datos no fijos
 class Celular:
     def __init__(self,marca,modelo,camara):
         self.marca = marca
@@ -37,4 +38,5 @@ class Celular:
 
 celular1 = Celular("Samsumg","S23","48MP")
 celular2 = Celular("Apple","Iphone 15 pro","48MP")
+
 print(celular1.marca)
