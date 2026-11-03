@@ -30,20 +30,26 @@
 
 # Primera clase con datos no fijos
 class Celular:
+    # Metodo constructor
     def __init__(self,marca,modelo,camara):
         self.marca = marca
         self.modelo = modelo
         self.camara = camara
+    # Metodo basico
     def llamar(self):
         print(f"Estas haciendo un llamado desde un: {self.modelo}")
-
+    # Metodo basico
     def cortar(self):
         print(f"Cortaste la llamada desde tu: {self.modelo}")
 
-
+# Asignacion de valores a los atributos del objeto
 celular1 = Celular("Samsumg","S23","48MP")
+
+# Asignacion de valores a los atributos del objeto
 celular2 = Celular("Apple","Iphone 15 pro","48MP")
 
+# Mostrar resultados
 print(celular1.marca)
+# Se llaman los metodos 
 celular1.llamar()
 celular2.cortar()
