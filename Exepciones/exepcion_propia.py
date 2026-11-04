@@ -8,7 +8,7 @@ class MiExcepcion(Exception):
 
 # Manejando una exepcion propia
 try:
-    raise MiExcepcion("Jajaja, fallase")
+    raise MiExcepcion("Jajaja, fallaste")
 except:
     print("Como cometiste ese error?")
 
