@@ -37,7 +37,7 @@ class Ave(Animal):
     def amamantar(self):
         return(f'amamantado')
     
-
+# Murcielago hereda de ave y mamifero, cuyas clases a su vez heredan de animal
 class Murcielago(Ave,Mamifero):
     def __init__(self):
         Animal.__init__(self)
@@ -50,8 +50,9 @@ class Murcielago(Ave,Mamifero):
         amamantar = super().amamantar()
         print(f'{comer}\n{amamantar}\n{volar}\n')
     
-
+# Creando una instancia
 Murcielagos = Murcielago()
+#Mostrando los resultados
 print("\nResultados de las funciones de momento\n")
 Murcielagos.comer()
 Murcielagos.volar()
