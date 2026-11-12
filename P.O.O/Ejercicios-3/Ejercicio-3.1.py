@@ -20,4 +20,5 @@ class Personaje():
 Goku = Personaje("Goku",10000)
 Vegetta = Personaje("Vegeta",2000)
 Fusion = Goku+Vegetta
+
 print(f'Hola soy {Fusion.personaje} y mi poder es: {Fusion.poder}')
